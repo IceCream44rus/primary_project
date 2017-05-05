@@ -651,10 +651,10 @@ nav li > a:active {
 	padding: 30px;
 	width: 16%;
 	border: 1px solid #e5e5e5;
-	margin-right: 31px;
 	font-family: ptsb , calibri , sans-serif;
 	min-height:284px;
 	margin: 10px 31px 23px 0;
+	font-size: 0;
 }
 
 .product > img {
@@ -773,4 +773,168 @@ nav li > a:active {
 
 .bookmarker:active {
 	opacity: 0.1;
+}
+
+/*POPULAR MANUFACTURED*/
+.manufacturer {
+	margin-bottom: 70px;
+}
+
+.manufactur {
+	border: 1px solid #e5e5e5;
+	min-height: 145px;
+    width: 22%;
+    margin:20px 31px 0 0;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.manufactur > img {
+	width: 72%;
+    position: relative;
+    top: 45px;
+    height: 50px;
+}
+
+.manufactur:nth-child(4n) {
+	margin-right: 0;
+}
+
+/* SERVICES */
+.services {
+	background-color:#f2f6f8;
+	padding: 30px 0 75px 0;
+	min-height: 459px;
+	margin-bottom: 70px;
+}
+
+.advantage > h3 {
+	text-transform: uppercase;
+	font-family:cr , calibri , sans-serif ;
+	font-size: 30px;
+	color: #000000;
+}
+
+.advantage > p {
+	font-family:pts , calibri , sans-serif;
+	font-size: 13px;
+	width: 34%;
+	line-height: 1.8;
+}
+
+/* TABS */
+.tabbed {
+	margin-top: 50px;
+	position: relative;
+	font-size: 0;
+}
+
+.tabbed > input {
+	display: none;
+}
+
+.tabbed > label {
+  display: block;
+  padding: 15px 20px;
+  margin-right: 5px;
+  cursor: pointer;
+  width: 15%;
+  color: #fff;
+  transition: background-color .3s;
+  background-color:#32425c ;
+  font-size: 21px;
+  font-family: cb,calibri , sans-serif;
+  border-bottom: 1px solid #293449;
+}
+
+.tabbed > input:checked + label {
+  background: #fff;
+  color: #32425c;
+}
+
+.tabbed > label:hover {
+	background-color: #293449;
+}
+
+.tabs > div {
+  width: 70%;
+  position: absolute;
+  padding: 10px 30px 40px;
+  line-height: 1.4em;
+  opacity: 0;
+  transform: rotateX(-20deg);
+  transform-origin: top center;
+  transition: opacity .3s, transform 1s;
+  z-index: 0;
+  top: -45px;
+  right: 0;
+}
+
+.tabs > div > h2 {
+	font-family:cr , calibri ,sans-serif ;
+	font-size: 36px;
+	color: #32425c;
+	line-height: 1;
+}
+
+.tabs > div > p {
+	font-family:pts , calibri ,sans-serif ;
+	font-size: 13px;
+	width: 33%;
+	line-height: 1.8;
+	position: relative;
+}
+
+.tabs > div > a{
+    font-size: 14px;
+    font-family: cr, calibri , sans-serif;
+    display: block;
+    text-transform: uppercase;
+    background-color: #ee3643;
+    line-height: 1;
+    width: 30%;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 13px;
+    margin-top: 20px;
+}
+
+.tabs > div > .car:after {
+	content: '';
+	position: absolute;
+	background:url('../img/sprites.png')no-repeat -8px -151px ;
+	width: 468px;
+	height: 261px;
+	top: -11%;
+}
+
+.tabs > div > .guarantee:after {
+	content: '';
+	position: absolute;
+	background:url('../img/sprites.png')no-repeat -594px -93px ;
+	width: 389px;
+	height: 283px;
+	top: -11%;
+	left: 55%;
+}
+
+.tabs > div > .credit:after {
+	content: '';
+	position: absolute;
+	background:url('../img/sprites.png')no-repeat -535px -431px;
+	width: 465px;
+	height: 285px;
+	top: -11px;
+	left: 55%;
+}
+
+#tab-nav-1:checked ~ .tabs > div:nth-of-type(1),
+#tab-nav-2:checked ~ .tabs > div:nth-of-type(2),
+#tab-nav-3:checked ~ .tabs > div:nth-of-type(3),
+#tab-nav-4:checked ~ .tabs > div:nth-of-type(4){
+  transform: rotateX(0deg);
+  opacity: 1;
+  z-index: 1;
 }
