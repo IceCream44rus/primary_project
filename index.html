@@ -5,11 +5,6 @@
 	<title>Выпускная работа</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
-
-	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
-	<link rel="stylesheet" type="text/css" href="engine0/style.css" />
-	<script type="text/javascript" src="engine0/jquery.js"></script>
-	<!-- End WOWSlider.com HEAD section --></head>
 <body>
 	<header class="header">
 		<div class="top_line_header">
@@ -20,7 +15,10 @@
 					</a>
 				</div>
 				<div class="search">
-					<span>Поиск:</span>
+					<form action="#">
+						<input type="search" placeholder="Поиск:">
+						<button></button>	
+					</form>
 				</div>
 				<div class="bookmark">
 					<a href="#">Закладки: 0</a>
@@ -46,9 +44,17 @@
 						<span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/88</span>
 					</div>
 					<div class="private_office">
-						<a href="#">Войти</a>
+						<button type="button" class="link">Войти</button>
 						<a href="#">Регистрация</a>
 					</div>
+				</div>
+				<div class="modal">
+					<form action="#">
+						<button type="close" class="close">X</button>
+						<input type="name" placeholder="Введите ваш логин">
+						<input type="password" placeholder="Введите ваш пароль">
+						<button type="submit" class="login">Войти</button>
+					</form>
 				</div>
 				<nav class="nav">
 					<ul>
@@ -274,5 +280,6 @@
 			</div>
 		</div>
 	</footer>
+	<script src="js/script.js"></script>
 </body>
 </html>

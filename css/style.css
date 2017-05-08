@@ -114,7 +114,7 @@ header {
 	display: block;
 	background-color: #ee3643;
 	text-align: center;
-	padding: 13px 0;
+	padding: 9px 0;
 	box-shadow: 0 4px 0 0 #b52933;
 	font-size: 24px;
 	text-transform: uppercase;
@@ -128,41 +128,65 @@ header {
 .logo > a:active {
 	background-color:#ba2732;
 }
-
+/*SEARCH*/
 .search {
 	float: left;
 	width: 24%;
 	font-size: 0;
 }
 
-.search > span {
-	margin-left: 45px;
-	cursor: pointer;
+.search > form {
 	position: relative;
-	padding: 17px 0;
+}
+
+.search > form > input {
+	padding: 14px 0 14px 33px;
 	font-size: 17px;
-	display: block;
+	display:inline-block;
+	background-color:#293449 ;
+	border: none;
+	width: 100%;
 }
 
-.search > span:before {
-	content: '';
+.search > form > input:focus {
+	background-color:#fff ;
+}
+
+.search > form > input:focus + button{
 	position: absolute;
-	width: 26px;
+	width: 17px;
 	height: 17px;
-	background: url('../img/sprites.png') no-repeat -42px -34px;
-	left: -14%;
+    background: url('../img/sprites.png') no-repeat -341px -542px;
+    left: 5%;
+    z-index: 1;
+    border: none;
+    top: 30%;
+    cursor: pointer;
 }
 
-.search > span:hover:before {
-	content: '';
-	position: absolute;
-	width: 26px;
-	height: 17px;
-	background: url('../img/sprites.png') no-repeat -46px -642px;
-	left: -14%; 
+.search > form > button {
+    position: absolute;
+    width: 26px;
+    height: 17px;
+    background: url('../img/sprites.png') no-repeat -42px -34px;
+    left: 5%;
+    z-index: 1;
+    border: none;
+    top: 32%;
+    cursor: pointer;
 }
 
+.search > input:hover > button {
+    position: absolute;
+    width: 26px;
+    height: 17px;
+    background: url('../img/sprites.png') no-repeat -46px -642px;
+    left: 5%;
+    top: 30%;
+}
 
+.search > form > input::-webkit-input-placeholder { color: #fff; }
+/*SEARCH*/
 .bookmark {
 	float: left;
 	width: 18%;
@@ -174,7 +198,7 @@ header {
 	text-decoration: none;
 	position: relative;
 	font-size: 17px;
-	padding: 17px 29px 17px 0;
+    padding: 15px 29px 15px 0;
 	display: block;
 }
 
@@ -211,7 +235,7 @@ header {
 	color: #fff;
 	text-decoration: none;
 	position: relative;
-	padding: 17px 45px 17px 0;	
+    padding: 15px 29px 15px 0;	
 	font-size: 17px;
 	display: block;
 }
@@ -226,7 +250,7 @@ header {
 	width: 26px;
 	height: 17px;
 	background: url('../img/sprites.png') no-repeat -192px -33px;
-	left: 4%;
+	left:15%;
 }
 
 .backet > a:hover:before {
@@ -249,7 +273,7 @@ header {
 	color: #fff;
 	text-decoration: none;
 	font-size: 17px;
-    padding: 17px 0px;
+    padding: 15px 0px;
     display: block;
     background-color: #63a63e;
 }
@@ -316,13 +340,12 @@ header {
 
 .private_office {
 	float: right;
-	margin-top: 13px;
 	text-align: right;
 	width: 38%;
 	font-size: 0;
 }
 
-.private_office > a {
+.private_office > a , .private_office > button ,.modal > form > .login {
     text-decoration: none;
     color: #000000;
     font-size: 21px;
@@ -330,20 +353,23 @@ header {
     padding: 13px 35px;
 }
 
-.private_office > a:hover {
+.private_office > a:hover , .private_office > button:hover , .modal > form > .login:hover {
 	color: #ee3643;
 }
 
-.private_office > a:active {
+.private_office > a:active , .private_office > button:active , .modal > form > .login:active {
 	color: rgba(0, 0, 0, 0.302);
 }
 
-.private_office > a:first-child {
+.private_office > button , .modal > form > .login {
 	margin-right: 10px;
 	position: relative;
+	outline: none;
+	border: none;
+	cursor: pointer;
 }
 
-.private_office > a:first-child:before {
+.private_office > button:before , .modal > form > .login:before {
     content: '';
     position: absolute;
     background: url('../img/sprites.png')no-repeat -289px -33px;
@@ -352,7 +378,7 @@ header {
     left: 7%;
     top: 31%;
 }
-.private_office > a:hover:first-child:before {
+.private_office > button:hover:before , .modal > form > .login:hover:before{
     content: '';
     position: absolute;
     background: url('../img/sprites.png')no-repeat -194px -641px;
@@ -360,6 +386,44 @@ header {
     height: 17px;
     left: 7%;
     top: 31%;	
+}
+
+.modal {
+	display: none;
+}
+
+.modal > form {
+    width: 35%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 20px;
+    border: 2px solid #293449;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.modal > form > input {
+	display: block;
+	margin: 15px auto;
+	padding: 10px;
+}
+
+.close {
+	position: absolute;
+	right: 3px;
+	top: 3px;
+	color: #293449;
+	font-size: 16px;
+	font-family: myriad;
+	background: none;
+	outline: none;
+	cursor: pointer;
+	border: 1px solid #293449;
+}
+
+.modal.show {
+	display: block;
 }
 /* NAV */
 nav {
@@ -913,6 +977,16 @@ nav li > a:active {
     margin-top: 20px;
 }
 
+.tabs > div > a:hover {
+	background-color:#ca2c37;
+	opacity: 0.9;
+}
+
+.tabs > div > a:active {
+	background-color:#ba2732 ;
+	opacity: 0.9;
+}
+
 .tabs > div > .car:after {
 	content: '';
 	position: absolute;
@@ -954,6 +1028,16 @@ nav li > a:active {
 /* COMPANY */
 .company {
 	margin-bottom: 85px;
+}
+
+.company a:hover {
+	background-color:#ca2c37;
+	opacity: 0.9;
+}
+
+.company a:active {
+	background-color:#ba2732 ;
+	opacity: 0.9;
 }
 
 .company_description {
@@ -1040,7 +1124,7 @@ nav li > a:active {
 	padding-bottom: 50px;
 }
 
-.footer a:hover {
+.footer_navigation a:hover , .footer_navigation_bottom a:hover{
 	text-decoration: underline;
 }
 
@@ -1108,6 +1192,10 @@ nav li > a:active {
 	background-color:#293449 ;
 	padding: 34px 0;
 	font-family: cr, calibri ,sans-serif;
+}
+
+.bottom_footer a:hover {
+	text-decoration: underline;
 }
 
 .copyright {
