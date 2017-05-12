@@ -432,6 +432,19 @@ header {
 	border: 1px solid #293449;
 }
 
+.close_map {
+	position: absolute;
+	right: 3px;
+	top: 3px;
+	color: #293449;
+	font-size: 16px;
+	font-family: myriad;
+	background: none;
+	outline: none;
+	cursor: pointer;
+	border: 1px solid #293449;
+}
+
 .modal.show {
 	display: block;
 }
@@ -1063,12 +1076,12 @@ nav li > a:active {
 	margin-bottom: 85px;
 }
 
-.company a:hover {
+.company a:hover , .modal_write:hover{
 	background-color:#ca2c37;
 	opacity: 0.9;
 }
 
-.company a:active {
+.company a:active , .modal_write:active {
 	background-color:#ba2732 ;
 	opacity: 0.9;
 }
@@ -1123,20 +1136,40 @@ nav li > a:active {
     width: 36%;
     text-align: center;
     padding: 14px 0;
-    margin-top: 40px;
+    margin-top: 50px;
     border-radius: 2px;
 }
 
 .contacts {
 	float: right;
 	width: 35%;
+	position: relative;
 }
 
+/* MAP */
 .map {
-	width: 300px;
+	width: 33%;
 }
 
-.contacts > a {
+.contacts > button {
+	border:none;
+	background: none;
+	cursor: pointer;
+}
+
+.map_modal {
+	display: none;
+	position: absolute;
+	right: 0%;
+    top: 28%;
+}
+
+.map_modal.show {
+	display: block;
+}
+
+/* MAP */
+.contacts > .modal_write {
     display: block;
     font-family: cr, calibri , sans-serif;
     text-decoration: none;
@@ -1148,6 +1181,69 @@ nav li > a:active {
     padding: 14px 0;
     margin-top: 37px;
     border-radius: 2px;
+    outline: none;
+    width:69%;
+}
+
+.write_me {
+	position: relative;
+	display: none;
+}
+
+.write_me.show {
+	display: block;
+}
+
+.write_me > form {
+    width: 81%;
+    margin: 50px auto;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 20px;
+    border: 2px solid #293449;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    font-family: myriad;
+    right:90%;
+}
+
+.write_me > form > input {
+	display: block;
+	margin: 15px auto;
+	padding: 10px;
+	font-size:16px;
+	color:#293449;
+}
+
+.write_me > form > textarea {
+	padding:10px;
+	font-size:14px;
+	color:#293449;
+}
+
+.write_me > form > button[type="submit"] {
+	border: 1px solid #293449;
+	background: none;
+	padding:5px 15px;
+	color:#293449;
+	font-size:18px;
+	font-weight: bold;
+	margin-top:10px;
+	cursor: pointer;
+}
+
+.close_write {
+	position: absolute;
+	right: 3px;
+	top: -6px;
+	color: #293449;
+	font-size: 16px;
+	font-family: myriad;
+	background: none;
+	outline: none;
+	cursor: pointer;
+	border: 1px solid #293449;
+	margin:0;
 }
 
 /*FOOTER */
@@ -1898,13 +1994,17 @@ border-radius: 4px;
 	text-align: center;
     float: left;
     position: relative;
-    padding: 30px;
-    width: 20%;
+    padding: 20px;
+    width: 24%;
     border: 1px solid #e5e5e5;
     font-family: ptsb , calibri , sans-serif;
     min-height: 284px;
-    margin: 10px 30px 23px 0;
+    margin: 10px 33px 23px 0;
     font-size: 0;
+}
+
+.products > .catalog_product:nth-of-type(3n) {
+	margin-right:0;
 }
 
 .catalog_product > img {
@@ -1944,6 +2044,7 @@ border-radius: 4px;
 .products_nav {
 	font-family: pts;
 	font-size: 0;
+	float:left;
 }
 
 .products_nav > a  {
