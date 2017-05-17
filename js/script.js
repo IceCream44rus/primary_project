@@ -33,3 +33,5 @@ modal_write.addEventListener("click" , function(){
 close_write.addEventListener("click" , function(){
 	write_me.classList.remove("show");
 });
+
+///////////////////////////////////////////////////////////////////////////////////
